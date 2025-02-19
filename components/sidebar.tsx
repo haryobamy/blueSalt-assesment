@@ -1,26 +1,11 @@
 'use client';
 
-import {
-  BarChart2,
-  Receipt,
-  Building2,
-  CreditCard,
-  Folder,
-  Wallet,
-  Users2,
-  Shield,
-  MessagesSquare,
-  Video,
-  Settings,
-  HelpCircle,
-  Menu,
-} from 'lucide-react';
+import { Settings } from 'lucide-react';
 
-import { Home } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+
 import Image from 'next/image';
-import { useBoolean } from 'usehooks-ts';
+
 import {
   Navlinks1,
   Navlinks2,
@@ -35,7 +20,7 @@ function NavItem({
   toggle,
 }: {
   href: string;
-  icon: any;
+  icon: TIcon;
   toggle: () => void;
   children: React.ReactNode;
 }) {
@@ -57,21 +42,8 @@ type Props = {
 };
 
 export default function Sidebar({ toggle, isMobileMenuOpen }: Props) {
-  //   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  //   function handleNavigation() {
-  //     setIsMobileMenuOpen(false)
-  //   }
-
   return (
     <>
-      {/* <button
-        type='button'
-        className='lg:hidden fixed top-4 left-4 z-[70] p-2 rounded-lg bg-white dark:bg-[#0F0F12] shadow-md'
-        onClick={() => toggle()}
-      >
-        <Menu className='h-5 w-5 text-gray-600 dark:text-gray-300' />
-      </button> */}
       <nav
         className={`
                 fixed inset-y-0 left-0 z-[70] w-64 bg-white dark:bg-[#0F0F12] transform transition-transform duration-200 ease-in-out
@@ -111,7 +83,7 @@ export default function Sidebar({ toggle, isMobileMenuOpen }: Props) {
             <div className='space-y-2'>
               <div className='border-b pb-3'>
                 <div className='space-y-3'>
-                  {Navlinks1.map((link, idx) => (
+                  {Navlinks1.map((link) => (
                     <NavItem
                       toggle={toggle}
                       key={`${link.label}`}
@@ -126,7 +98,7 @@ export default function Sidebar({ toggle, isMobileMenuOpen }: Props) {
 
               <div className='border-b pb-3'>
                 <div className='space-y-3'>
-                  {Navlinks2.map((link, idx) => (
+                  {Navlinks2.map((link) => (
                     <NavItem
                       toggle={toggle}
                       key={`${link.label}`}
@@ -141,7 +113,7 @@ export default function Sidebar({ toggle, isMobileMenuOpen }: Props) {
 
               <div className='border-b pb-3'>
                 <div className='space-y-3'>
-                  {Navlinks3.map((link, idx) => (
+                  {Navlinks3.map((link) => (
                     <NavItem
                       toggle={toggle}
                       key={`${link.label}`}
@@ -159,7 +131,7 @@ export default function Sidebar({ toggle, isMobileMenuOpen }: Props) {
                   Overview
                 </div> */}
                 <div className='space-y-3'>
-                  {Navlinks4.map((link, idx) => (
+                  {Navlinks4.map((link) => (
                     <NavItem
                       toggle={toggle}
                       key={`${link.label}`}

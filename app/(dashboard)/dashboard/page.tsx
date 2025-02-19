@@ -5,29 +5,9 @@ import { PieGraph } from '@/components/pie-chart';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { dashboardData, trafficData } from '@/constants/navlinks';
 import { Bug, Nfc, User } from 'lucide-react';
-import Image from 'next/image';
 import React from 'react';
-import { LineChart } from 'recharts';
-
-export const hideCred = (str: string): string => {
-  return btoa(str.split('').reverse().join(''));
-};
-
-export const hideCred2 = (str: string): string => {
-  const encoded = Buffer.from(str, 'base64').toString('utf-8');
-  return encoded.split('').reverse().join('');
-};
-
-export const getCred = (str: string): string => {
-  return atob(str).split('').reverse().join('');
-};
 
 export default function Dashboard() {
-  // NEXT_PUBLIC_IV=S2rgj6U*ydY+hMWx   //eFdNaCtZZHkqVTZqZ3IyUw==
-  // NEXT_PUBLIC_KEY=xUL5gUkY5Gq%j@VR  // UlZAaiVxRzVZa1VnNUxVeA==
-
-  console.log(hideCred('xUL5gUkY5Gq%j@VR'));
-  console.log(hideCred2('xUL5gUkY5Gq%j@VR'));
   return (
     <div className='grid grid-cols-1 lg:grid-cols-[70%_28%] gap-4 bg-white dark:bg-black'>
       {/* right  */}

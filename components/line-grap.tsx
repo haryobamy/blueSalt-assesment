@@ -1,26 +1,8 @@
 'use client';
+//@typescript-eslint/ban-ts-comment
+import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
-import {
-  Area,
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
-
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
-  ChartTooltip,
-  ChartTooltipContent,
-} from '@/components/ui/chart';
+import { ChartConfig, ChartContainer } from '@/components/ui/chart';
 import { formatTick } from '@/lib/utils';
 
 const chartData = [
@@ -67,7 +49,7 @@ export function LineGraph() {
           dataKey=''
           tickLine={false}
           axisLine={false}
-          //@ts-ignore
+          //@ts-expect-error formatte error
           tickFormatter={(value) => formatTick(value)}
         />
 

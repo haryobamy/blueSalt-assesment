@@ -1,6 +1,6 @@
 'use client';
 
-import { Bar, BarChart, CartesianGrid, Cell, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, Cell, XAxis, YAxis } from 'recharts';
 
 import {
   ChartConfig,
@@ -12,21 +12,6 @@ import {
 } from '@/components/ui/chart';
 import { useCallback } from 'react';
 import { formatTick } from '@/lib/utils';
-
-const chartData = [
-  { month: 'January', desktop: 9300, mobile: 80 },
-  { month: 'February', desktop: 4600, mobile: 9760 },
-  { month: 'March', desktop: 12500, mobile: 12000 },
-  { month: 'April', desktop: 22140, mobile: 19320 },
-  { month: 'May', desktop: 24309, mobile: 16800 },
-  { month: 'June', desktop: 22790, mobile: 16540 },
-  { month: 'July', desktop: 21400, mobile: 14000 },
-  { month: 'Aug', desktop: 21094, mobile: 10340 },
-  { month: 'Sept', desktop: 21044, mobile: 14040 },
-  { month: 'Oct', desktop: 21784, mobile: 140 },
-  { month: 'Nov', desktop: 21834, mobile: 24140 },
-  { month: 'Dec', desktop: 19650, mobile: 28960 },
-];
 
 const chartConfig = {
   desktop: {
@@ -111,7 +96,7 @@ export function Barchart({ isMonth = false }: Props) {
           dataKey=''
           tickLine={false}
           axisLine={false}
-          //@ts-ignore
+          //@ts-expect-error formatte error
           tickFormatter={(value) => formatTick(value)}
         />
         <ChartTooltip content={<ChartTooltipContent />} />

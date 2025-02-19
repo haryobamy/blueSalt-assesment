@@ -1,22 +1,14 @@
 'use client';
 
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import Image from 'next/image';
-import {
   Bell,
   ChevronRight,
-  Clock1,
   CommandIcon,
   History,
   Search,
   Sidebar,
   Slash,
 } from 'lucide-react';
-import Profile from './profile';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
 

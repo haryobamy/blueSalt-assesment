@@ -25,7 +25,7 @@ export default function TrafficIntersection() {
 
   useEffect(() => {
     if (!isRuning) return;
-    let timer: any;
+    let timer: ReturnType<typeof setTimeout>;
 
     if (state === 'greenA') {
       timer = setTimeout(() => setState('yellow'), 10000);

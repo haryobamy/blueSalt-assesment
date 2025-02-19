@@ -1,3 +1,4 @@
+//@typescript-eslint/no-explicit-any
 import { DashboardIcon } from '@/components/icons';
 import {
   HourglassIcon,
@@ -7,7 +8,7 @@ import {
   User,
 } from 'lucide-react';
 
-export const Navlinks1 = [
+export const Navlinks1: NavLinks = [
   {
     label: 'Dashboard',
     url: '',
@@ -19,7 +20,7 @@ export const Navlinks1 = [
     icon: HourglassIcon,
   },
 ];
-export const Navlinks2 = [
+export const Navlinks2: NavLinks = [
   {
     label: 'KYC',
     url: '',
@@ -37,7 +38,7 @@ export const Navlinks2 = [
   },
 ];
 
-export const Navlinks3 = [
+export const Navlinks3: NavLinks = [
   {
     label: 'AuditTrail',
     url: '',
