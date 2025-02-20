@@ -9,11 +9,11 @@ import React from 'react';
 
 export default function Dashboard() {
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-[70%_28%] gap-4 bg-white dark:bg-black'>
+    <div className='grid grid-cols-1 lg:grid-cols-[60%,38%] xl:grid-cols-[70%_28%] gap-4 bg-white dark:bg-black'>
       {/* right  */}
       <aside className='flex flex-col gap-4'>
         {/* cards */}
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4'>
           {dashboardData.map((data, idx) => (
             <DashboardCard key={idx} data={data} />
           ))}
